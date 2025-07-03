@@ -1,11 +1,3 @@
-//ARDUINO OBSTACLE AVOIDING CAR//
-// Before uploading the code you have to install the necessary library//
-//AFMotor Library https://learn.adafruit.com/adafruit-motor-shield/library-install //
-//NewPing Library https://github.com/livetronic/Arduino-NewPing// 
-//Servo Library https://github.com/arduino-libraries/Servo.git //
-// To Install the libraries go to sketch >> Include Library >> Add .ZIP File >> Select the Downloaded ZIP files From the Above links //
-
-
 #include <AFMotor.h>  
 #include <NewPing.h>
 #include <Servo.h> 
@@ -124,8 +116,7 @@ void moveForward() {
     motor2.run(FORWARD);
     motor3.run(FORWARD); 
     motor4.run(FORWARD);     
-   for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // slowly bring the speed up to avoid loading down the batteries too quickly
-   {
+   for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2)    {
     motor1.setSpeed(speedSet);
     motor2.setSpeed(speedSet);
     motor3.setSpeed(speedSet);
@@ -141,7 +132,7 @@ void moveBackward() {
     motor2.run(BACKWARD);
     motor3.run(BACKWARD);
     motor4.run(BACKWARD);  
-  for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) // slowly bring the speed up to avoid loading down the batteries too quickly
+  for (speedSet = 0; speedSet < MAX_SPEED; speedSet +=2) 
   {
     motor1.setSpeed(speedSet);
     motor2.setSpeed(speedSet);
